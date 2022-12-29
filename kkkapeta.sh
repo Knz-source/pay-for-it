@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Define o número de vezes que a informação será enviada
-num_records=999999999999999999999999
+# Definir o numero de vezes
+num_records=x
 
-# Define o intervalo de tempo entre cada envio (em segundos)
-interval=5
+# Definir o intervalo de tempo entre cada envio (em segundos)
+interval=2
 
-# Envia a informação para o conjunto de dados 100 vezes
+# Enviando a informação x vezes (vide definição de número de vezes)
 for (( i=1; i<=$num_records; i++ ))
 do
-  aws firehose put-record-batch --delivery-stream-name my-delivery-stream --records "bmlnZ2VybmlnZ2Vy"
+  aws firehose put-record-batch --delivery-stream-name my-delivery-stream --records "MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAw"
   sleep $interval
 done
 
